@@ -76,6 +76,12 @@ namespace QCM
             {
                 btn_Test.Visible    = false;
             }
+            else if (this.user.isAdmin())
+            {
+                btn_Test.Visible = false;
+
+
+            }
         }
 
         private void init_summary()

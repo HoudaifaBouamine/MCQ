@@ -49,10 +49,10 @@ namespace QCM
             this.p_QCM_List.AutoScroll = true;
             this.p_QCM_List.Controls.Add(this.lbl_qcm_list);
             this.p_QCM_List.Controls.Add(this.btn_AddNew);
-            this.p_QCM_List.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p_QCM_List.Dock = System.Windows.Forms.DockStyle.Left;
             this.p_QCM_List.Location = new System.Drawing.Point(3, 3);
             this.p_QCM_List.Name = "p_QCM_List";
-            this.p_QCM_List.Size = new System.Drawing.Size(1568, 852);
+            this.p_QCM_List.Size = new System.Drawing.Size(1568, 752);
             this.p_QCM_List.TabIndex = 0;
             this.p_QCM_List.Scroll += new System.Windows.Forms.ScrollEventHandler(this.p_QCM_List_Scroll);
             this.p_QCM_List.Paint += new System.Windows.Forms.PaintEventHandler(this.p_QCM_List_Paint);
@@ -88,7 +88,7 @@ namespace QCM
             this.tp_Main.Controls.Add(this.tp_QCM_LIST);
             this.tp_Main.Controls.Add(this.tp_Preview);
             this.tp_Main.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tp_Main.Location = new System.Drawing.Point(0, -46);
+            this.tp_Main.Location = new System.Drawing.Point(0, 54);
             this.tp_Main.Name = "tp_Main";
             this.tp_Main.SelectedIndex = 0;
             this.tp_Main.Size = new System.Drawing.Size(1582, 899);
@@ -103,7 +103,7 @@ namespace QCM
             this.tp_QCM_LIST.Location = new System.Drawing.Point(4, 37);
             this.tp_QCM_LIST.Name = "tp_QCM_LIST";
             this.tp_QCM_LIST.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_QCM_LIST.Size = new System.Drawing.Size(1574, 858);
+            this.tp_QCM_LIST.Size = new System.Drawing.Size(1574, 758);
             this.tp_QCM_LIST.TabIndex = 0;
             this.tp_QCM_LIST.Text = "QCM List";
             // 
@@ -116,7 +116,7 @@ namespace QCM
             this.tp_Preview.Location = new System.Drawing.Point(4, 37);
             this.tp_Preview.Name = "tp_Preview";
             this.tp_Preview.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Preview.Size = new System.Drawing.Size(1574, 759);
+            this.tp_Preview.Size = new System.Drawing.Size(1574, 758);
             this.tp_Preview.TabIndex = 1;
             this.tp_Preview.Text = "Preview";
             // 

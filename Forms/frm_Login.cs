@@ -33,19 +33,34 @@ namespace QCM
         private void btn_login_teacher_Click(object sender, EventArgs e)
         {
 
-            if(user.Email == "houdaifa@gmail.com" && user.isCorrectPassword("1234"))
+            string email = tb_Email.Text;
+            string password = tb_Password.Text;
+            User user = User.find_teacher_by_email(email);
+
+
+            if(user == null)
+            {
+                errorProvider1.SetError(btn_login_teacher, "Email or password not valid");
+                tb_Password.Text = "";
+                return;
+            }
+
+         
+            if (!user.isCorrectPassword(password))
             {
 
-                user = User.get_Teacher();
-                this.successfull = true;
-                this.Close();
-            }
-            else
-            {
-                errorProvider1.SetError(btn_login_teacher, "email or password not valid");
+                errorProvider1.SetError(btn_login_teacher, "Email or password not valid");
                 tb_Password.Text = "";
-                
+                return;
             }
+
+            errorProvider1.SetError(btn_login_teacher, "");
+            successfull = true;
+            this.user = user;
+            this.Close();
+            return;
+
+           
 
         }
 
@@ -96,7 +111,6 @@ namespace QCM
             if (user.Email == "h.bouamine@gmail.com" && user.isCorrectPassword("1234"))
             {
 
-                user = User.get_Student();
                 this.successfull = true;
                 this.Close();
             }

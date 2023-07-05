@@ -11,12 +11,15 @@ namespace QCM.Classes
     internal class App
     {
 
-         public const string fQCM_List = "QCM_List.txt";
+        public const string fQCM_List = "QCM_List.txt";
+        public const string fStudent_List = "Student_List.txt";
+        public const string fTeacher_List = "Teacher_List.txt";
+
+
         public enum enStatus { eLogin, eList,eModify,ePreview,eTest,eHis};
 
         enStatus status;
         public frm_Main main_form;
-
         public enStatus Status
         {
             get

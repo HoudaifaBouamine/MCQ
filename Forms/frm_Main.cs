@@ -30,11 +30,12 @@ namespace QCM
         {
             App.instance().main_form = this;
 
+
             if(!login())
             {
                 return;
             }
-            //currentUser = User.get_Teacher();
+
             load_QCM_boxes();
 
             lbl_qcm_list.BackColor = Color.Transparent;
@@ -70,6 +71,9 @@ namespace QCM
                     this.Visible = true;
                     frmLogin.Dispose();
                     App.instance().Status = App.enStatus.eList;
+
+                   
+
                     return true;
                 }
                 else
